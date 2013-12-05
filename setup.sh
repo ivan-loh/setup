@@ -3,7 +3,7 @@
 # for headless setup. 
 
 # Install essentials
-sudo apt-get install -y git curl python-software-properties python g++ make
+sudo apt-get install -y curl python-software-properties python g++ make
 
 # Add Required repository
 sudo add-apt-repository -y ppa:cassou/emacs
