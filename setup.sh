@@ -7,7 +7,7 @@ sudo apt-get install -y curl python-software-properties python g++ make
 
 # Add Required repository
 sudo add-apt-repository -y ppa:cassou/emacs
-sudo add-apt-repository ppa:chris-lea/node.js
+sudo add-apt-repository -y ppa:chris-lea/node.js
 
 # Update repo information
 sudo apt-get -qq update
@@ -24,6 +24,7 @@ sudo apt-get install -y nodejs emacs24-nox emacs24-el emacs24-common-non-dfsg rl
 # Install jshint to allow checking of JS code within emacs
 # http://jshint.com/
 sudo npm install -g jshint
+sudo chown -R `whoami` ~/tmp
 
 # git pull and install dotfiles as well
 cd $HOME
@@ -40,4 +41,3 @@ ln -sb dotfiles/.bash_profile .
 ln -sb dotfiles/.bashrc .
 ln -sb dotfiles/.bashrc_custom .
 ln -sf dotfiles/.emacs.d .
-
