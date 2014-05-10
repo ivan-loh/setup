@@ -41,3 +41,8 @@ ln -sb dotfiles/.bash_profile .
 ln -sb dotfiles/.bashrc .
 ln -sb dotfiles/.bashrc_custom .
 ln -sf dotfiles/.emacs.d .
+
+# Complete emacs setup
+cd dotfiles/.emacs.d
+git clone https://github.com/auto-complete/popup-el.git
+git clone https://github.com/auto-complete/auto-complete.git
