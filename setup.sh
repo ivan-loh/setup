@@ -46,3 +46,8 @@ ln -sf dotfiles/.emacs.d .
 cd dotfiles/.emacs.d
 git clone https://github.com/auto-complete/popup-el.git
 git clone https://github.com/auto-complete/auto-complete.git
+
+# gitignore_global
+wget https://gist.githubusercontent.com/octocat/9257657/raw/c91b435be351fcdff00f6f97f20824d0286b99ef/.gitignore
+mv .gitignore ~/.gitignore_global
+git config --global core.excludesfile ~/.gitignore_global
