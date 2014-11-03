@@ -28,7 +28,7 @@ sudo apt-get install -y htop gcc build-essential nodejs emacs24-nox emacs24-el e
 
 # Install jshint to allow checking of JS code within emacs
 # http://jshint.com/
-sudo npm install -g jshint
+sudo npm install -g jshint forever grunt grunt-cli yo bower
 sudo chown -R `whoami` ~/tmp
 
 # git pull and install dotfiles as well
