@@ -56,3 +56,5 @@ git clone https://github.com/auto-complete/auto-complete.git
 wget https://gist.githubusercontent.com/octocat/9257657/raw/c91b435be351fcdff00f6f97f20824d0286b99ef/.gitignore
 mv .gitignore ~/.gitignore_global
 git config --global core.excludesfile ~/.gitignore_global
+
+sudo dpkg-reconfigure tzdata
