@@ -8,18 +8,23 @@ sudo apt-get install -y curl python-software-properties python g++ make
 # Add Required repository
 sudo add-apt-repository -y ppa:cassou/emacs
 sudo add-apt-repository -y ppa:chris-lea/node.js
+sudo add-apt-repository -y ppa:chris-lea/zeromq
+sudo add-apt-repository -y ppa:chris-lea/redis-server
+sudo add-apt-repository -y ppa:keithw/mosh
+sudo add-apt-repository -y ppa:webupd8team/java
 
-# Update repo information
-sudo apt-get -qq update
+sudo apt-key adv --keyserver keyserver.ubuntu.com --recv-key 505A7412
+echo "deb [arch=amd64] http://s3.amazonaws.com/tokumx-debs $(lsb_release -cs) main" | sudo tee /etc/apt/sources.list.d/tokumx.list
 
-# 1. Install nodejs
-#
-# 2. Install emacs24
-# https://launchpad.net/~cassou/+archive/emacs
-#
-# 3. Install rlwrap to provide libreadline features with node
-# See: http://nodejs.org/api/repl.html#repl_repl
-sudo apt-get install -y nodejs emacs24-nox emacs24-el emacs24-common-non-dfsg rlwrap
+
+# Update repo information && accept java license
+sudo apt-get update
+sudo apt-get upgrade
+sudo echo oracle-java8-installer shared/accepted-oracle-license-v1-1 select true | sudo /usr/bin/debconf-set-selections
+
+
+# 1. Install Dev Software
+sudo apt-get install -y htop gcc build-essential nodejs emacs24-nox emacs24-el emacs24-common-non-dfsg rlwrap libzmq3-dev redis-server tokumx mosh oracle-java8-installer
 
 # Install jshint to allow checking of JS code within emacs
 # http://jshint.com/
