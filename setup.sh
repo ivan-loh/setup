@@ -45,7 +45,7 @@ ln -sb dotfiles/.screenrc .
 ln -sb dotfiles/.bash_profile .
 ln -sb dotfiles/.bashrc .
 ln -sb dotfiles/.bashrc_custom .
-ln -sf dotfiles/.emacs.d .
+ln -sf dotfiles/.emacs.d .emacs.d/lisp/
 
 # Complete emacs setup
 cd dotfiles/.emacs.d
