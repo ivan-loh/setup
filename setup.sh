@@ -18,13 +18,13 @@ echo "deb [arch=amd64] http://s3.amazonaws.com/tokumx-debs $(lsb_release -cs) ma
 
 
 # Update repo information && accept java license
-sudo apt-get update
+sudo apt-get update -y
 sudo apt-get upgrade
 sudo echo oracle-java8-installer shared/accepted-oracle-license-v1-1 select true | sudo /usr/bin/debconf-set-selections
 
 
 # 1. Install Dev Software
-sudo apt-get install -y htop gcc build-essential nodejs emacs24-nox emacs24-el emacs24-common-non-dfsg rlwrap libzmq3-dev redis-server tokumx mosh oracle-java8-installer
+sudo apt-get install -y htop gcc build-essential nodejs emacs24-nox emacs24-el emacs24-common-non-dfsg rlwrap libzmq3-dev redis-server tokumx mosh oracle-java8-installer maven
 
 # Install jshint to allow checking of JS code within emacs
 # http://jshint.com/
@@ -45,7 +45,7 @@ ln -sb dotfiles/.screenrc .
 ln -sb dotfiles/.bash_profile .
 ln -sb dotfiles/.bashrc .
 ln -sb dotfiles/.bashrc_custom .
-ln -sf dotfiles/.emacs.d .emacs.d/lisp/
+ln -sb dotfiles/.emacs.d .emacs.d/lisp/
 
 # Complete emacs setup
 cd dotfiles/.emacs.d
