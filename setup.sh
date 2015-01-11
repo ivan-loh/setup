@@ -19,7 +19,7 @@ echo "deb [arch=amd64] http://s3.amazonaws.com/tokumx-debs $(lsb_release -cs) ma
 
 # Update repo information && accept java license
 sudo apt-get update -y
-sudo apt-get upgrade
+sudo apt-get upgrade -y
 sudo echo oracle-java8-installer shared/accepted-oracle-license-v1-1 select true | sudo /usr/bin/debconf-set-selections
 
 
