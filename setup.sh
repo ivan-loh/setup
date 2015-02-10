@@ -45,10 +45,10 @@ ln -sb dotfiles/.screenrc .
 ln -sb dotfiles/.bash_profile .
 ln -sb dotfiles/.bashrc .
 ln -sb dotfiles/.bashrc_custom .
-ln -sb dotfiles/.emacs.d .emacs.d/lisp/
+ln -sb dotfiles/.emacs.d .emacs.d/
 
 # Complete emacs setup
-cd dotfiles/.emacs.d
+cd dotfiles/.emacs.d/lisp
 git clone https://github.com/auto-complete/popup-el.git
 git clone https://github.com/auto-complete/auto-complete.git
 
