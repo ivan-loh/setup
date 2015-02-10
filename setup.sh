@@ -7,7 +7,7 @@ sudo apt-get install -y curl python-software-properties python g++ make
 
 # Add Required repository
 sudo add-apt-repository -y ppa:cassou/emacs
-sudo add-apt-repository -y ppa:chris-lea/node.js
+curl -sL https://deb.nodesource.com/setup | sudo bash -
 sudo add-apt-repository -y ppa:chris-lea/zeromq
 sudo add-apt-repository -y ppa:chris-lea/redis-server
 sudo add-apt-repository -y ppa:keithw/mosh
