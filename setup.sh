@@ -29,6 +29,7 @@ sudo apt-get install -y htop gcc build-essential nodejs emacs24-nox emacs24-el e
 # Install jshint to allow checking of JS code within emacs
 # http://jshint.com/
 sudo npm install -g jshint forever grunt grunt-cli yo bower
+sudo chown -R `whoami` ~/.npm
 sudo chown -R `whoami` ~/tmp
 
 # git pull and install dotfiles as well
@@ -45,7 +46,7 @@ ln -sb dotfiles/.screenrc .
 ln -sb dotfiles/.bash_profile .
 ln -sb dotfiles/.bashrc .
 ln -sb dotfiles/.bashrc_custom .
-ln -sb dotfiles/.emacs.d .emacs.d/
+ln -sb dotfiles/.emacs.d .
 
 # Complete emacs setup
 cd dotfiles/.emacs.d/lisp
@@ -56,5 +57,6 @@ git clone https://github.com/auto-complete/auto-complete.git
 wget https://gist.githubusercontent.com/octocat/9257657/raw/c91b435be351fcdff00f6f97f20824d0286b99ef/.gitignore
 mv .gitignore ~/.gitignore_global
 git config --global core.excludesfile ~/.gitignore_global
+
 
 sudo dpkg-reconfigure tzdata
