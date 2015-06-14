@@ -11,6 +11,7 @@ curl -sL https://deb.nodesource.com/setup | sudo bash -
 sudo add-apt-repository -y ppa:chris-lea/zeromq
 sudo add-apt-repository -y ppa:chris-lea/redis-server
 sudo add-apt-repository -y ppa:keithw/mosh
+sudo add-apt-repository ppa:nginx/stable
 sudo add-apt-repository -y ppa:webupd8team/java
 
 sudo apt-key adv --keyserver keyserver.ubuntu.com --recv-key 505A7412
@@ -24,7 +25,7 @@ sudo echo oracle-java8-installer shared/accepted-oracle-license-v1-1 select true
 
 
 # 1. Install Dev Software
-sudo apt-get install -y htop gcc build-essential nodejs emacs24-nox emacs24-el emacs24-common-non-dfsg rlwrap libzmq3-dev redis-server tokumx mosh oracle-java8-installer maven
+sudo apt-get install -y htop gcc build-essential nodejs emacs24-nox emacs24-el emacs24-common-non-dfsg rlwrap libzmq3-dev redis-server tokumx mosh oracle-java8-installer maven nginx
 
 # Install jshint to allow checking of JS code within emacs
 # http://jshint.com/
